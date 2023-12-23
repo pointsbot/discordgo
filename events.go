@@ -406,3 +406,15 @@ type AutoModerationActionExecution struct {
 type GuildAuditLogEntryCreate struct {
 	*AuditLogEntry
 }
+
+type EntitlementCreate struct {
+	*Entitlement
+}
+
+type EntitlementDelete struct {
+	*Entitlement
+}
+
+type EntitlementUpdate struct {
+	*Entitlement
+}

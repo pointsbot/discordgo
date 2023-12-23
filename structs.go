@@ -2439,3 +2439,21 @@ const (
 func MakeIntent(intents Intent) Intent {
 	return intents
 }
+
+type EntitlementType int
+
+const (
+	EntitlementApplicationSubscription EntitlementType = 8
+)
+
+type Entitlement struct {
+	ID            string          `json:"id"`
+	SkuID         string          `json:"sku_id"`
+	ApplicationID string          `json:"application_id"`
+	UserID        *string         `json:"user_id"`
+	Type          EntitlementType `json:"type"`
+	Deleted       bool            `json:"deleted"`
+	StartsAt      *time.Time      `json:"starts_at"`
+	EndsAt        *time.Time      `json:"ends_at"`
+	GuildID       *string         `json:"guild_id"`
+}
